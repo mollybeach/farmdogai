@@ -1,0 +1,8 @@
+model Todo {
+  id          String   @id @default(cuid())
+  content     String
+  isCompleted Boolean  @default(false)
+  priority    String   @default("medium")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+} 
